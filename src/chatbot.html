@@ -9,30 +9,42 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/styles/chatbot-styles.css">
-  <title>Chatbot</title>
+  <title>SymptomAI - Chatbot</title>
+
+  <!-- JavaScript -->
+   <script src="chatbot.js"></script>
 </head>
 <body>
-  <!-- constainer start -->
+
   <div id="container">
-    <!-- Top-container -->
+   <!-- Header -->
    <header>
-    <box-icon name='error'></box-icon>
-    <box-icon type='solid' name='trash-alt'></box-icon>
+   <a href="./index.html"> <img src="/images/SymptomsAI logo.jpg" style= "width:50px; border-radius: 10px;"class ="header-img"></a>
+
+    <div class="icons">
+      <input type="text" name="search" placeholder="Search" class="search-bar">
+      <box-icon name='search' class="search"></box-icon>
+      <box-icon type='solid' name='share-alt' class="share-icon"></box-icon>
+    </div>   
    </header>
-   <div>
-    <box-icon name='search'></box-icon>
-    <input type="text" name="search" placeholder="Search">
+
+   <!-- Main -->
+   <div class="main">
+    <h1>SymptomAI</h1>
+    <p>Hi! I'm SymptomAI, your personal health assistant. </p>
+    <p>How do you feel today?</p>    
    </div>
-   <!-- End of Top-container -->
-   <!-- Bottom container -->
-   <div>
-    <textarea placeholder="Type a new message here"></textarea>
+
+ 
+   <!-- Input Area -->
+   <div class="input-text">
     <box-icon name='paperclip' rotate='90' ></box-icon>
+    <textarea placeholder="Enter your symptoms..."></textarea>
     <box-icon name='smile'></box-icon>
     <box-icon name='send'></box-icon>
    </div>
-   <!-- End of bottom container -->
+  
   </div>
-  <!-- End of container -->
+
 </body>
 </html>

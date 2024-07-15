@@ -1,2 +1,111 @@
 
+  *{
+    background-color: #E0F7FA;
+    margin: 0;
+  }
+  html, body {
+    height: 100%; /* Make sure the body takes up full viewport height */
+   
+  }
+
+  .container { /* This could be body or a specific div that wraps your content */
+    position: relative; /* Establish a positioning context */
+    min-height: 100%; /* Ensure it takes up at least the full height of the viewport */
+  }
   
+  header{
+    padding: 10px;
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+ .icons{
+    display: flex;
+    color: #000000;
+    position: absolute;
+    right:10px;
+    top:15px;
+ }
+ 
+ .search-bar{
+    display: none;
+ }
+
+ .search-bar.show{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;    
+ }
+
+ /* Main */
+ .main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:50px;
+}
+
+ .main h1{
+    color: #002366;
+    margin: 20px;
+ }
+
+.main p{
+   text-align: center;
+}
+   
+ /* Input Area */
+.input-text {
+    position: absolute; 
+    bottom: 0; 
+    width:70%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 10px;
+    border: 2px solid #002366;
+    border-radius: 25px;
+    padding:5px 10px;
+    left:50%;
+    transform: translate(-50%);
+    box-shadow: 0 0 10px 0 #0000001a;
+}
+
+.input-text textarea{
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    text-align: center;
+}
+
+@media (max-width:576px){
+
+    /* Hides the header image when the search icon is clicked */
+    .hide {
+        display: none;
+      }
+
+    .icons{
+        gap:10px;
+    }  
+
+    h1{
+        font-size: 24px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    .input-text{
+        gap:5px;
+        padding: 5px;
+        width:80%;        
+    }
+
+}

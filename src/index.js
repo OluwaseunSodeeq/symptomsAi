@@ -1,11 +1,13 @@
+// Index HTML Functions 
+ 
  // Function to get the current year and insert it into the HTML
- function displayCurrentYear() {
+function displayCurrentYear() {
   const currentYear = new Date().getFullYear();
   document.getElementById("currentYear").textContent = currentYear;
 }
 
-// Menu bar functionlity
 
+// Menu bar functionlity
 document.addEventListener('DOMContentLoaded', function() {
  const hamburgerMenu = document.querySelector('.hamburger-menu');
  const navigation = document.querySelector('.navigation');
@@ -27,28 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
-
-  
-  //Functionality for the login User email check sign 
-  document.addEventListener('DOMContentLoaded', function() {
-    const emailInput = document.getElementById('email');
-    const checkIcon = document.querySelector('.check');
-
-    emailInput.addEventListener('input', function() {
-      if (validateEmail(emailInput.value)) {
-        checkIcon.style.display = 'block'; // Show the check icon
-      } else {
-        checkIcon.style.display = 'none'; // Hide the check icon
-      }
-    });
-  });
-
-  function validateEmail(email) {
-    const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return regex.test(email.toLowerCase());
-  }
-
-  // When the user scrolls down 20px from the top of the document, show the button
+// When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
         
 function scrollFunction() {
@@ -59,8 +40,43 @@ function scrollFunction() {
    }
 }
  
- // Functionality for back to top button
+// Functionality for back to top button
 function topFunction() {
    document.body.scrollTop = 0; // For Safari
    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 }
+  
+// Login.HTML Function
+//Functionality for the login User email check sign 
+document.addEventListener('DOMContentLoaded', function() {
+  const emailInput = document.getElementById('email');
+  const checkIcon = document.querySelector('.check');
+
+    emailInput.addEventListener('input', function() {
+      if (validateEmail(emailInput.value)) {
+        checkIcon.style.display = 'block'; // Show the check icon
+      } else {
+        checkIcon.style.display = 'none'; // Hide the check icon
+      }
+    });
+});
+
+function validateEmail(email) {
+  const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return regex.test(email.toLowerCase());
+}
+
+// Register.HTML Function 
+// Confirm Password Functionality
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.querySelector('form');
+  const password = document.getElementById('password');
+  const confirmPassword = document.getElementById('confirm-password');
+
+  form.addEventListener('submit', function (e) {
+    if (password.value !== confirmPassword.value) {
+      e.preventDefault(); // Prevent form submission
+      alert('Passwords do not match.');
+    }
+  });
+});
