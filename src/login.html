@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpg" href="/images/SymptomsAI logo.jpg">
+  <link rel="stylesheet" href="/styles/login-styles.css" />
+  <title>Sign in</title>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <script src="./index.js"></script>
+</head>
+<body>
+
+  <h1><a href="./index.html"><img src="/images/SymptomsAI logo.jpg" id="header-logo" style= "width:50px; border-radius: 10px; margin-right: 7px;"></a>SymptomAI</h1>
+  <h3>AI powered symptom diagnosis</h3>
+  <!--container Start-->
+  <section id="form-container">
+    <h1>Welcome</h1>
+    <p>Resume your symptom check</p>   
+    <div> 
+    
+    <!--Form Wrap Start-->
+    <div class="form-wrap">
+
+      <!--Form Start-->
+    <form action="./chatbot.html" method="get">
+        <div class="form-group">
+
+          <div class="input-container">
+            <box-icon type='solid' name='user' class="box-icon"></box-icon>
+            <input type="text" name="full-Name" id="first-name" placeholder="Full Name" required>
+           </div>
+
+        </div>
+        <div class="form-group">
+          <div class="input-container">
+            <box-icon type='solid' name='envelope' class="box-icon" ></box-icon>
+            <input type="text" name="email" id="email" placeholder="user@email.com" required > 
+            <box-icon name='check' class= "check box-icon-1" ></box-icon>
+            </div>
+        </div>
+      <!-- <div class="form-group">
+            <box-icon type='solid' name='user-image'></box-icon>
+        <input type="file" name="image" id="image" required/>
+        </div> -->
+        <div class="form-group">
+          <div class="input-container">
+            <box-icon type='solid' name='lock' class="box-icon"></box-icon>
+            <input type="password" name="password" id="password" placeholder="Password" required>
+          </div>
+        </div>
+        <div class="input-container">
+          <button type="submit">Sign in</button>
+        </div>  
+        </form>
+    <!--Form Close-->
+
+    <p>Don't have an account? <a href="./register.html"> Sign Up</a></p>
+      </div>
+    <!--Form Wrap Close-->
+    </div>
+
+  </section>
+   <!--container close-->
+</body>
+</html>

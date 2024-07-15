@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+     <link rel="icon" type="image/jpg" href="/images/SymptomsAI logo.jpg">
+    <title>SymptomAI: Diagnose with AI</title>
+    <!-- Styling -->
+    <link rel="stylesheet" href="/styles/style.css">
+
+    <!-- Fonts -->
+      <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- JavaScript -->
+    <script src="/src/index.js" defer></script>
+
+</head>
+<body onload="displayCurrentYear()">
+    <header>
+        <div class="head">
+           <a href="#home"> <img src="/images/SymptomsAI logo.jpg" id="header-logo" style= "width:50px; border-radius: 10px;"></a>
+          <p>SymptomAI</p>
+        </div>
+        <!-- Hamburger Icon -->
+        <div class="hamburger-menu">
+           <div class="bar"></div>
+           <div class="bar"></div>
+           <div class="bar"></div>
+        </div>
+
+        <nav class="navigation">            
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#benefits">Benefits</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero" id="home">
+            <div class="hero-main " >
+                <h1>SymptomAI</h1>
+                <h4>Diagnose Your Symptoms with Artificial Intelligence</h4>
+                
+                <p>Unwell? Try SymptomsAI. Chat about your symptoms and get insights on next steps</p>
+                <a class="btn hero-btn" href="/src/register.html">Start Now<img src="/images/diagonal-arrow.svg" alt=""></a>
+            </div>
+            <div>
+                <img class="main-img" src="/images/medicine.jpg" alt="Image by Gerd Altmann from Pixabay">
+            </div>   
+        </section>
+
+        <!-- About -->
+        <section id="about" >
+            <div class="about">
+              <h3>About SymptomAI</h3>
+              <p>SymptomsAI is an AI-powered chatbot designed to help users diagnose illnesses based on the symptoms they input. This tool leverages artificial intelligence to provide accurate and reliable medical advice, ensuring users receive accurate and appropriate guidance.</p>
+            </div>  
+        </section>
+
+        <!-- Features -->
+        <section id="features" class="features">
+            <h3>Features</h3>
+            <h4>What we bring to the table😉 </h4>
+            <ul>
+                <li>AI-powered insights to help you understand your symptoms.</li>
+                <li>Fast and trustworthy diagnosis</li>
+                <li>Confidence scores to help you gauge the likelihood of each diagnosis.</li>
+                <li>Personalized guidance on what to do next.</li>
+            </ul>
+        </section>
+
+        <!-- Benefits -->
+        <section id="benefits" class="benefits">
+            <h3>What we offer </h3>
+            <ul>
+                <li>Early detection of potential illnesses</li>
+                <li>Gain peace of mind with informed decisions</li>
+                <li>Empower yourself with knowledge</li>
+                <li>Reduced healthcare costs</li>
+                <li>Increased self health awareness</li>
+                <li>Convenience and Accessibility</li>
+                <li>Reduced stress and anxiety</li>
+            </ul>
+        </section>
+        <!-- CTA (Call To Action) -->
+        <section id="action" class="cta">
+            
+            <h2>Get Diagnosed Now</h2>
+            <p>Join the Future of Healthcare </p>
+            <a class="btn other-btn" href="/src/register.html" target="_blank">Sign Up</a>
+            <p>Already have an account?</p>
+            <a class="btn other-btn" href="/src/login.html" target="_self">Sign in</a>
+        </section>
+    </main>
+
+     <!-- Back to top arrow -->
+     <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="/images/up-arrow.svg"></button>
+
+    <footer>
+        <p> <span id="currentYear"></span> SymptomAI</p> </p>
+    </footer>
+</body>
+</html>
