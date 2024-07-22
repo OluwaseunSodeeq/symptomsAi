@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/jpg"
+      href="{{ url_for('static', filename='images/SymptomsAI logo.jpg') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/chatbox-styles.css') }}"
+    />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <title>SymptomAI - Chatbot</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="../index.html">
+          <!-- <img
+              id="header-logo"
+            /> -->
+          <img
+            src="{{ url_for('static', filename='images/SymptomsAI logo.jpg') }}"
+            style="width: 50px; border-radius: 10px"
+            class="header-img"
+        /></a>
+      </div>
+      <div class="icons">
+        <p>Hi, {{ full_name }}</p>
+        <input
+          type="text"
+          name="search"
+          placeholder="Search"
+          class="search-bar"
+        />
+        <!-- <box-icon name="search" class="search"></box-icon>
+        <box-icon type="solid" name="share-alt" class="share-icon"></box-icon> -->
+      </div>
+    </header>
+
+    <div class="main">
+      <div class="mainPlaceholder">
+        <div class="defaultContent">
+          <h1>SymptomAI</h1>
+          <p>Hi! I'm SymptomAI, your personal health assistant.</p>
+          <p>How do you feel today?</p>
+        </div>
+      </div>
+    </div>
+    <div class="input-text">
+      <box-icon class="box-icon" name="paperclip" rotate="90"></box-icon>
+      <input
+        id="symptomSearchBox"
+        placeholder="Enter your symptoms..."
+        type="text"
+      />
+      <box-icon class="box-icon" name="smile"></box-icon>
+      <box-icon class="box-icon" name="send" id="sendSymptom"></box-icon>
+    </div>
+  </body>
+</html>

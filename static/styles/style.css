@@ -5,13 +5,13 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: "Lato", sans-serif;
-  
 }
 
-body{
-  background-color: #E0F7FA;
+body {
+  background-color: #e0f7fa;
 }
-h2, h3{
+h2,
+h3 {
   color: #004080;
   font-weight: bold;
   font-size: 40px;
@@ -21,11 +21,11 @@ h2, h3{
 
 /* Hamburger Menu */
 .hamburger-menu {
-  display: none; 
+  display: none;
   cursor: pointer;
   position: fixed;
-  right:20px;
-  top:20px;
+  right: 20px;
+  top: 20px;
   z-index: 10;
 }
 
@@ -42,28 +42,30 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  margin:20px;
-  gap: 10px;
-  color: #FFFFFF;
+  padding: 10px 0;
+  margin: 20px;
+  color: #ffffff;
   scroll-behavior: smooth;
   position: relative;
+  width: 1300px;
+  margin: 0 auto;
 }
 
 .head {
   display: flex;
   align-items: center;
   gap: 7px;
-  color:#002366
+  color: #002366;
+  margin-top: 10px;
 }
 
-.head p{
+.head p {
   margin-left: 10px;
 }
 
 nav {
   display: flex;
-  gap: 70px; 
+  gap: 70px;
 }
 
 nav a {
@@ -81,15 +83,13 @@ nav a:hover {
   padding: 7px;
   width: 50%;
   background-color: #013a7e;
-  color: #FFFFFF;
+  color: #ffffff;
   border: none;
   border-radius: 15px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
 }
-
-
 
 .btn:hover {
   background-color: #026b6b;
@@ -102,7 +102,7 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   padding: 70px 0;
-  background-color: #E0F7FA;
+  background-color: #e0f7fa;
 }
 
 .hero div {
@@ -112,7 +112,7 @@ nav a:hover {
   justify-content: center;
 }
 
-.hero-main{
+.hero-main {
   margin: 50px;
 }
 
@@ -122,7 +122,8 @@ nav a:hover {
   font-size: 40px;
 }
 
-.hero h4, .hero p {
+.hero h4,
+.hero p {
   color: #555555;
 }
 
@@ -139,13 +140,13 @@ nav a:hover {
   }
 }
 
-.main-img{
+.main-img {
   border-radius: 150px;
-  margin:20px;
+  margin: 20px;
   animation: slideInFromLeft 2s ease-out forwards;
 }
 
-.hero-btn{
+.hero-btn {
   display: flex;
   gap: 10px;
   justify-content: center;
@@ -155,8 +156,8 @@ nav a:hover {
 /* About */
 .about {
   text-align: center;
-  padding: 150px 50PX;
-  background-color: #F5F5F5;
+  padding: 150px 50px;
+  background-color: #f5f5f5;
 }
 
 .about p {
@@ -172,13 +173,12 @@ nav a:hover {
   gap: 15px;
   justify-content: center;
   align-items: center;
-  padding: 150px 40PX;
-  background-color: #FFFFFF;
+  padding: 150px 40px;
+  background-color: #ffffff;
 }
 
-
-.features h4{
- color: #002366;
+.features h4 {
+  color: #002366;
 }
 .features ul {
   color: #555555;
@@ -192,18 +192,17 @@ nav a:hover {
   gap: 15px;
   justify-content: center;
   align-items: center;
-  padding: 150px 40PX;
+  padding: 150px 40px;
   background-color: #008080;
 }
 
 .benefits ul {
-  color: #FFFFFF;
+  color: #ffffff;
   line-height: 1.5;
 }
-.benefits h3{
-  color:#FFF;
+.benefits h3 {
+  color: #fff;
 }
-
 
 /* CTA (Call To ACtion) */
 .cta {
@@ -212,8 +211,8 @@ nav a:hover {
   gap: 15px;
   justify-content: center;
   align-items: center;
-  padding: 100px 40PX;
-  background-color: #E0F7FA;
+  padding: 100px 40px;
+  background-color: #e0f7fa;
 }
 
 .cta p {
@@ -224,8 +223,8 @@ nav a:hover {
   padding-top: 15px;
 }
 
-.other-btn{
-  width:100px;
+.other-btn {
+  width: 100px;
 }
 
 /* Footer */
@@ -235,37 +234,33 @@ footer {
   justify-content: center;
   padding: 35px;
   gap: 10px;
-  background-color: #E0F7FA;
+  background-color: #e0f7fa;
   color: #002366;
 }
 
-
 #myBtn {
-  display: none; 
-  position: fixed; 
-  bottom: 20px; 
-  right: 30px; 
-  z-index: 99; 
-  border: none; 
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
   outline: none;
   background-color: #002366;
-  color: white; 
-  cursor: pointer; 
-  padding: 15px; 
-  border-radius: 10px; 
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
 }
-
-
 
 /* Media Queries */
 @media (max-width: 576px) {
-
-/* Navigation */
+  /* Navigation */
   .hamburger-menu {
-    display: block; 
+    display: block;
   }
   .navigation {
-    display: none; 
+    display: none;
     position: fixed;
     top: 0;
     left: -100%; /* Hide off-screen initially */
@@ -273,34 +268,35 @@ footer {
     background-color: #f4f4f4;
     transition: left 0.4s;
     flex-direction: column;
-    padding:30px;
-    z-index: 9;  
+    padding: 30px;
+    z-index: 9;
   }
 
   .navigation.show {
     display: flex;
     flex-direction: column;
-    left: 0; 
+    left: 0;
   }
 
-   .head p{
+  .head p {
     display: none;
-   }
+  }
 
-/* Hero */
-  .hero h1{
+  /* Hero */
+  .hero h1 {
     font-size: 30px;
   }
-  h2, h3{
+  h2,
+  h3 {
     font-size: 24px;
   }
 
-  .hero{
+  .hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
-   align-items: center;
-   text-align: center;
+    align-items: center;
+    text-align: center;
   }
 
   .hero-btn {
@@ -308,46 +304,45 @@ footer {
     margin-right: auto;
   }
 
-  .main-img{
-   display: none;  
+  .main-img {
+    display: none;
   }
 }
 
-
 @media (max-width: 768px) {
-  nav{
-    gap:15px;
+  nav {
+    gap: 15px;
   }
 
-   nav a {
+  nav a {
     font-size: 17px;
   }
 
-  .main-img{
+  .main-img {
     display: none;
-  } 
-
-  .hero-main{
-    margin:20px;
   }
 
-  .about, .benefits, .features, .cta {
+  .hero-main {
+    margin: 20px;
+  }
+
+  .about,
+  .benefits,
+  .features,
+  .cta {
     padding: 150px 20px;
   }
-
 }
 
-
 @media (max-width: 992px) {
-
-  nav{
-    gap:30px;
+  nav {
+    gap: 30px;
   }
   nav a {
     font-size: 17.5px;
   }
 
-  .main-img{
+  .main-img {
     border-radius: 450px;
     width: 400px;
   }

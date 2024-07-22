@@ -1,0 +1,239 @@
+*,
+::before,
+::after {
+  /* background-color: #ffffff; */
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%; /* Make sure the body takes up full viewport height */
+  background-color: #ffffff;
+}
+#container {
+  position: relative;
+
+  height: 100vh;
+  background-color: #e0f7fa;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* border: 2px solid red; */
+  overflow: hidden;
+}
+
+header {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  width: 80%;
+  margin: 0 auto;
+  /* border: 2px solid red; */
+}
+header p {
+  font-size: 40px;
+  color: #002366;
+  margin-top: 10px;
+  /* border: 2px solid red; */
+}
+
+.icons {
+  display: flex;
+  /* color: #000000; */
+  /* position: absolute; */
+  right: 10px;
+  top: 15px;
+}
+.box-icon {
+  cursor: pointer;
+  color: #002366;
+  /* border: 2px solid red; */
+}
+.search-bar {
+  display: none;
+}
+
+.search-bar.show {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+/* Main */
+.main {
+  height: 75%;
+  overflow-y: scroll;
+  padding: 10px;
+  /* border: 2px solid green; */
+}
+.main::-webkit-scrollbar {
+  display: none;
+}
+.defaultContent h1 {
+  color: #002366;
+  margin: 20px;
+  text-align: center;
+  font-size: 36px;
+}
+
+.defaultContent p {
+  text-align: center;
+  font-size: 20px;
+}
+
+/* #typing { */
+/* font-size: 18px;
+  animation: typing 2s steps(18), cursor 0.4s step-end infinite alternate; */
+/* } */
+
+.hideMe {
+  display: none;
+}
+
+/* style.css */
+/* style.css */
+.type-main-container {
+  border-left: 3px solid #002366;
+  padding-left: 10px;
+  border-radius: 6px;
+}
+.flexEnd {
+  display: flex;
+  justify-content: end;
+  margin-top: 5px;
+}
+.type-user-container {
+  /* position: relative; */
+  display: inline-block;
+  border-right: 3px solid #000;
+  padding-right: 10px;
+  border-radius: 3px;
+  /* right: 0; */
+  text-align: center;
+}
+.type-user-container p {
+  font-size: 18px;
+  color: #000;
+}
+.typing-container {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 24px;
+  animation: blink-caret 0.75s step-end infinite;
+  overflow: hidden;
+  /* border-right: 0.15em solid orange; */
+  /* border-left: 3px solid #002366; */
+  border-radius: 7px;
+}
+
+.typing-container .typing {
+  display: inline-block;
+  white-space: pre-wrap;
+  margin: 0;
+}
+.typing-container span {
+  font-weight: 600;
+  color: inherit;
+}
+.box {
+  display: flex;
+  align-items: end;
+  gap: 3px;
+}
+.box-1 {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+.image-box {
+  width: 40px;
+  height: 40px;
+  border: 2px solid blue;
+}
+.image-box img {
+  width: 100%;
+}
+@keyframes blink-caret {
+  from,
+  to {
+    /* border-color: transparent; */
+  }
+  50% {
+    /* border-color: orange; */
+  }
+}
+/* CURSOR */
+/* @keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+/* TYPING */
+@keyframes cursor {
+  from {
+    width: 0;
+  }
+}
+
+/* Input Area */
+.input-text {
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 10px;
+  border: 2px solid #000;
+  /* border: 2px solid #002366; */
+  border-left: none;
+  border-right: none;
+  border-radius: 7px;
+  padding: 5px 10px;
+  left: 50%;
+  transform: translate(-50%);
+  box-shadow: 0 0 10px 0 #0000001a;
+}
+
+.input-text input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  resize: none;
+  padding-left: 30px;
+  background-color: #fff;
+  color: #000;
+  font-size: 18px;
+  /* border: 2px solid red; */
+  /* text-align: center; */
+}
+
+@media (max-width: 576px) {
+  /* Hides the header image when the search icon is clicked */
+  .hide {
+    display: none;
+  }
+
+  .icons {
+    gap: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .input-text {
+    gap: 5px;
+    padding: 5px;
+    width: 80%;
+  }
+}

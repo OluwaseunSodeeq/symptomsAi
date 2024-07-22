@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/jpg"
+      href="{{ url_for('static', filename='images/SymptomsAI logo.jpg') }}"
+    />
+    <title>SymptomAI: Diagnose with AI</title>
+    <!-- Styling -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/style.css') }}"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- JavaScript -->
+    <script
+      src="{{ url_for('static', filename='src/index.js') }}"
+      defer
+    ></script>
+  </head>
+  <!-- <body onload="displayCurrentYear()"> -->
+  <body>
+    <header>
+      <div class="head">
+        <a href="#home">
+          <img
+            src="{{ url_for('static', filename='images/SymptomsAI logo.jpg') }}"
+            id="header-logo"
+            style="width: 50px; border-radius: 10px"
+        /></a>
+        <p>SymptomAI</p>
+      </div>
+      <!-- Hamburger Icon -->
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <nav class="navigation">
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#benefits">Benefits</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero" id="home">
+        <div class="hero-main">
+          <h1>SymptomAI</h1>
+          <h4>Diagnose Your Symptoms with Artificial Intelligence</h4>
+
+          <p>
+            Unwell? Try SymptomsAI. Chat about your symptoms and get insights on
+            next steps
+          </p>
+          <a class="btn hero-btn" href="/signIn"
+            >Start Now<img
+              src="{{ url_for('static', filename='images/diagonal-arrow.svg') }}"
+              alt=""
+          /></a>
+        </div>
+        <div>
+          <img
+            class="main-img"
+            src="{{ url_for('static', filename='images/medicine.jpg') }}"
+            alt="Image by Gerd Altmann from Pixabay"
+          />
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about">
+        <div class="about">
+          <h3>About SymptomAI</h3>
+          <p>
+            SymptomsAI is an AI-powered chatbot designed to help users diagnose
+            illnesses based on the symptoms they input. <br />
+            This tool leverages artificial intelligence to provide accurate and
+            reliable medical advice, ensuring users receive accurate and
+            appropriate guidance.
+          </p>
+          <p>
+            <b>Please Note The Following</b><br />
+            SymptomAI is not a Replacement for Professional Medical Advice
+            <br />
+            While SymptomAI provides valuable guidance, it is not a substitute
+            for professional medical diagnosis and treatment. <br />
+            Users are encouraged to consult healthcare professionals for
+            comprehensive medical care.
+          </p>
+          <p>
+            Dependent on User Input
+            <br />The accuracy of the diagnosis depends on the completeness and
+            accuracy of the information provided by the user. <br />Incomplete
+            or inaccurate symptom reporting can lead to incorrect advice.
+          </p>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section id="features" class="features">
+        <h3>Features</h3>
+        <h4>What we bring to the table😉</h4>
+        <ul>
+          <li>AI-powered insights to help you understand your symptoms.</li>
+          <li>Fast and trustworthy diagnosis</li>
+          <li>
+            Confidence scores to help you gauge the likelihood of each
+            diagnosis.
+          </li>
+          <li>Personalized guidance on what to do next.</li>
+          <li>Privacy and confidentiality</li>
+        </ul>
+      </section>
+
+      <!-- Benefits -->
+      <section id="benefits" class="benefits">
+        <h3>What we offer</h3>
+        <ul>
+          <li>Early detection of potential illnesses</li>
+          <li>Gain peace of mind with informed decisions</li>
+          <li>Empower yourself with knowledge</li>
+          <li>Reduced healthcare costs</li>
+          <li>Increased self health awareness</li>
+          <li>Convenience and Accessibility</li>
+          <li>Reduced stress and anxiety</li>
+        </ul>
+      </section>
+      <!-- CTA (Call To Action) -->
+      <section id="action" class="cta">
+        <h2>Get Diagnosed Now</h2>
+        <p>Join the Future of Healthcare</p>
+        <a class="btn other-btn" href="/signIn" target="_blank">Sign in</a>
+      </section>
+    </main>
+
+    <!-- Back to top arrow -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <img src="{{ url_for('static', filename='images/up-arrow.svg') }}" />
+    </button>
+
+    <footer>
+      <p><span id="currentYear"></span> SymptomAI</p>
+    </footer>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/jpg" href="/images/SymptomsAI logo.jpg" />
+    <title>SymptomAI: Diagnose with AI</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="/src/index.js" defer></script>
+  </head>
+  <body onload="displayCurrentYear()">
+    <header>
+      <div class="head">
+        <a href="#home">
+          <img
+            src="/images/SymptomsAI logo.jpg"
+            id="header-logo"
+            style="width: 50px; border-radius: 10px"
+        /></a>
+        <p>SymptomAI</p>
+      </div>
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <nav class="navigation">
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#benefits">Benefits</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-main">
+          <h1>SymptomAI</h1>
+          <h4>Diagnose Your Symptoms with Artificial Intelligence</h4>
+
+          <p>
+            Unwell? Try SymptomsAI. Chat about your symptoms and get insights on
+            next steps
+          </p>
+          <a class="btn hero-btn" href="/src/signIn.html"
+            >Start Now<img src="/images/diagonal-arrow.svg" alt=""
+          /></a>
+        </div>
+        <div>
+          <img
+            class="main-img"
+            src="/images/medicine.jpg"
+            alt="Image by Gerd Altmann from Pixabay"
+          />
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="about">
+          <h3>About SymptomAI</h3>
+          <p>
+            SymptomsAI is an AI-powered chatbot designed to help users diagnose
+            illnesses based on the symptoms they input. <br />
+            This tool leverages artificial intelligence to provide accurate and
+            reliable medical advice, ensuring users receive accurate and
+            appropriate guidance.
+          </p>
+          <p>
+            <b>Please Note The Following</b><br />
+            SymptomAI is not a Replacement for Professional Medical Advice
+            <br />
+            While SymptomAI provides valuable guidance, it is not a substitute
+            for professional medical diagnosis and treatment. <br />
+            Users are encouraged to consult healthcare professionals for
+            comprehensive medical care.
+          </p>
+          <p>
+            Dependent on User Input
+            <br />The accuracy of the diagnosis depends on the completeness and
+            accuracy of the information provided by the user. <br />Incomplete
+            or inaccurate symptom reporting can lead to incorrect advice.
+          </p>
+        </div>
+      </section>
+
+      <section id="features" class="features">
+        <h3>Features</h3>
+        <h4>What we bring to the table😉</h4>
+        <ul>
+          <li>AI-powered insights to help you understand your symptoms.</li>
+          <li>Fast and trustworthy diagnosis</li>
+          <li>
+            Confidence scores to help you gauge the likelihood of each
+            diagnosis.
+          </li>
+          <li>Personalized guidance on what to do next.</li>
+          <li>Privacy and confidentiality</li>
+        </ul>
+      </section>
+
+      <section id="benefits" class="benefits">
+        <h3>What we offer</h3>
+        <ul>
+          <li>Early detection of potential illnesses</li>
+          <li>Gain peace of mind with informed decisions</li>
+          <li>Empower yourself with knowledge</li>
+          <li>Reduced healthcare costs</li>
+          <li>Increased self health awareness</li>
+          <li>Convenience and Accessibility</li>
+          <li>Reduced stress and anxiety</li>
+        </ul>
+      </section>
+      <section id="action" class="cta">
+        <h2>Get Diagnosed Now</h2>
+        <p>Join the Future of Healthcare</p>
+        <a class="btn other-btn" href="/src/signIn.html" target="_blank"
+          >Sign in</a
+        > -->
+<!-- <p>Already have an account?</p>
+            <a class="btn other-btn" href="/src/signIn.html" target="_self">Sign in</a> -->
+<!-- </section>
+    </main>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <img src="/images/up-arrow.svg" />
+    </button>
+
+    <footer>
+      <p><span id="currentYear"></span> SymptomAI</p>
+    </footer>
+  </body>
+</html> -->

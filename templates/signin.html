@@ -1,0 +1,172 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="{{ url_for('static', filename='images/SymptomsAI logo.jpg') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/login-styles.css') }}">
+    <title>Sign in</title>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="{{ url_for('static', filename='src/index.js') }}" defer></script>
+</head>
+<body>
+    <div>
+        <a href="{{ url_for('index') }}">
+            <div class="logo">
+                <div><img src="{{ url_for('static', filename='images/SymptomsAI logo.jpg') }}" id="header-logo"></div>
+                <h1>SymptomAI</h1>
+            </div>
+        </a>
+    </div>
+    <h3>AI powered symptom diagnosis</h3>
+    <section id="form-container">
+        <p>Resume your symptom check</p>
+        <div class="form-wrap">
+            <form method="POST" action="{{ url_for('signinformvalidation') }}">
+                <div class="form-group">
+                    <div class="input-container">
+                        <box-icon type="solid" name="user" class="user box-icon"></box-icon>
+                        <input type="text" name="full-name" id="full-name" placeholder="Full Name">
+                    </div>
+                    <p class="error-message name-error"></p>
+                </div>
+                <div class="form-group">
+                    <div class="input-container">
+                        <box-icon type="solid" name="envelope" class="envelope box-icon"></box-icon>
+                        <input type="email" name="email" id="email" placeholder="user@email.com">
+                        <box-icon name="check" class="check box-icon-1"></box-icon>
+                    </div>
+                    <p class="error-message email-error"></p>
+                </div>
+                <div class="form-group">
+                    <div class="input-container">
+                        <box-icon type="solid" name="lock" class="lock box-icon"></box-icon>
+                        <input type="password" name="password" id="password" placeholder="Password">
+                    </div>
+                    <p class="error-message password-error"></p>
+                </div>
+                <div class="input-container">
+                    <button type="submit">Sign in</button>
+                </div>
+                <p class="success-message"></p>
+            </form>
+        </div>
+    </section>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/jpg"
+      href="{{ url_for('static', filename='images/SymptomsAI logo.jpg') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/login-styles.css') }}"
+    />
+    <title>Sign in</title>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="{{ url_for('static', filename='src/index.js') }}"></script>
+  </head>
+  <body>
+    <div>
+      <a href="{{ url_for('index') }}">
+        <div class="logo">
+          <div>
+            <img
+              src="{{ url_for('static', filename='images/SymptomsAI logo.jpg') }}"
+              id="header-logo"
+            />
+          </div>
+          <h1>SymptomAI</h1>
+        </div>
+      </a>
+    </div>
+    <h3>AI powered symptom diagnosis</h3>
+    <section id="form-container">
+      <p>Resume your symptom check</p>
+      <div class="form-wrap">
+        <form method="POST" action="{{ url_for('signinformvalidation') }}">
+          <div class="form-group">
+            <div class="input-container">
+              <box-icon
+                type="solid"
+                name="user"
+                class="user box-icon"
+              ></box-icon>
+              <input
+                type="text"
+                name="full-name"
+                id="full-name"
+                placeholder="Full Name"
+              />
+            </div>
+            <p class="error-message name-error">
+              {% with messages = get_flashed_messages(with_categories=true) %}
+              {% if messages %} {% for category, message in messages %} {% if
+              category == 'name-error' %} {{ message }} {% endif %} {% endfor %}
+              {% endif %} {% endwith %}
+            </p>
+          </div>
+          <div class="form-group">
+            <div class="input-container">
+              <box-icon
+                type="solid"
+                name="envelope"
+                class="envelope box-icon"
+              ></box-icon>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="user@email.com"
+              />
+              <box-icon name="check" class="check box-icon-1"></box-icon>
+            </div>
+            <p class="error-message email-error">
+              {% with messages = get_flashed_messages(with_categories=true) %}
+              {% if messages %} {% for category, message in messages %} {% if
+              category == 'email-error' %} {{ message }} {% endif %} {% endfor
+              %} {% endif %} {% endwith %}
+            </p>
+          </div>
+          <div class="form-group">
+            <div class="input-container">
+              <box-icon
+                type="solid"
+                name="lock"
+                class="lock box-icon"
+              ></box-icon>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Password"
+              />
+            </div>
+            <p class="error-message password-error">
+              {% with messages = get_flashed_messages(with_categories=true) %}
+              {% if messages %} {% for category, message in messages %} {% if
+              category == 'password-error' %} {{ message }} {% endif %} {%
+              endfor %} {% endif %} {% endwith %}
+            </p>
+          </div>
+          <div class="input-container">
+            <button type="submit">Sign in</button>
+          </div>
+          <!-- <p class="success-message">
+            {% with messages = get_flashed_messages(with_categories=true) %} {%
+            if messages %} {% for category, message in messages %} {% if
+            category == 'success' %} {{ message }} {% endif %} {% endfor %} {%
+            endif %} {% endwith %}
+          </p> -->
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
